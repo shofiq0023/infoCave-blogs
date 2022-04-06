@@ -32,7 +32,7 @@ Variables:
     	"authorId": 2154,
     	"snippet": "Alien invasion on earth",
     	"detail": "this is where the actual blogs is written",
-    	"blogDate": Timestamp
+    	"blogDate": "Timestamp()"
     }
     ```
 
