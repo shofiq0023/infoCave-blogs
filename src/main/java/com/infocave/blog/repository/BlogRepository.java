@@ -8,6 +8,6 @@ import com.infocave.blog.models.BlogModel;
 
 public interface BlogRepository extends JpaRepository<BlogModel, Long>{
 	
-	List<BlogModel> findAllByAuthor(Integer authorId);
+	List<BlogModel> findAllByAuthorId(Integer authorId);
 
 }

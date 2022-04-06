@@ -20,8 +20,8 @@ public class BlogModel {
 	@Column(name = "blog_title")
 	private String title;
 
-	@Column(name = "blog_author")
-	private Integer author;
+	@Column(name = "blog_authorId")
+	private Integer authorId;
 
 	@Column(name = "blog_snippet")
 	private String snippet;
@@ -36,7 +36,7 @@ public class BlogModel {
 		super();
 		this.blogId = blogId;
 		this.title = title;
-		this.author = author;
+		this.authorId = author;
 		this.snippet = snippet;
 		this.detail = detail;
 		this.blogDate = blogDate;
@@ -46,7 +46,7 @@ public class BlogModel {
 		super();
 		this.blogId = blogId;
 		this.title = title;
-		this.author = author;
+		this.authorId = author;
 		this.snippet = snippet;
 		this.detail = detail;
 	}
@@ -54,7 +54,7 @@ public class BlogModel {
 	public BlogModel(String title, Integer author, String snippet, String detail) {
 		super();
 		this.title = title;
-		this.author = author;
+		this.authorId = author;
 		this.snippet = snippet;
 		this.detail = detail;
 	}
@@ -88,11 +88,11 @@ public class BlogModel {
 	}
 
 	public Integer getAuthor() {
-		return author;
+		return authorId;
 	}
 
 	public void setAuthor(Integer author) {
-		this.author = author;
+		this.authorId = author;
 	}
 
 	public String getSnippet() {

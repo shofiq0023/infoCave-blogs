@@ -48,7 +48,7 @@ public class BlogService {
 	
 	public BlogListResponse getAllByAuthor(Integer authorId) {
 		List<BlogModel> blogsByAuthor = new ArrayList<>();
-		blogRepo.findAllByAuthor(authorId).forEach(blogsByAuthor::add);
+		blogRepo.findAllByAuthorId(authorId).forEach(blogsByAuthor::add);
 		BlogListResponse listResponse = new BlogListResponse(blogsByAuthor);
 		return listResponse;
 	}

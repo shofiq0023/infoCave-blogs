@@ -16,19 +16,21 @@ Variables:
 
 -   **/add** : adds a new blog to the DB.
 
+    Header:
+
     ```json
-    Headers:
     {
     	"Content-Type": "application/json"
     }
     ```
 
-    ```json
     Body:
+
+    ```json
     {
     	"title": "The Outsider",
-    	"author": 2154, // Author id
-    	"snippet": "Alien invasion on earth", // Small description
+    	"authorId": 2154,
+    	"snippet": "Alien invasion on earth",
     	"detail": "this is where the actual blogs is written",
     	"blogDate": Timestamp
     }
