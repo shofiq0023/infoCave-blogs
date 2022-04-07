@@ -25,6 +25,7 @@ public class UserService {
 	@Autowired
 	private UserRepository userRepo;
 	
+	// Gets all user detail
 	public UserListResponse getAll() {
 		List<UserModel> users = new ArrayList<>();
 		userRepo.findAll().forEach(users::add);
@@ -33,6 +34,7 @@ public class UserService {
 		return response;
 	}
 	
+	// Gets a single user
 	public Optional<UserModel> getUser(Long userId) throws Exception {
 		try {
 			logger.info("Getting user " + userId + " from DB");
@@ -42,6 +44,7 @@ public class UserService {
 		}
 	}
 	
+	// Adds a new user
 	public UserModel add(UserModel user) throws Exception {
 		try {
 			logger.info("Adding user to DB");
@@ -51,6 +54,7 @@ public class UserService {
 		}
 	}
 
+	// Login with email and password
 	public boolean login(UserLoginModel userLogin) throws Exception {
 		try {
 			String encodedUserPassword = Base64.getEncoder().encodeToString(userLogin.getPassword().getBytes());
@@ -66,6 +70,7 @@ public class UserService {
 		}
 	}
 	
+	// Deletes a user using user id
 	public Map<String, String> deleteUser(Long userId) throws Exception {
 		try {
 			logger.info("Deleted user with userId " + userId);
