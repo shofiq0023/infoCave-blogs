@@ -32,43 +32,27 @@ public class BlogModel {
 	@Column(name = "blog_date")
 	private Date blogDate = new Date();
 
-	public BlogModel(Long blogId, String title, Integer author, String snippet, String detail, Date blogDate) {
-		super();
-		this.blogId = blogId;
-		this.title = title;
-		this.authorId = author;
-		this.snippet = snippet;
-		this.detail = detail;
-		this.blogDate = blogDate;
-	}
-
-	public BlogModel(Long blogId, String title, Integer author, String snippet, String detail) {
-		super();
-		this.blogId = blogId;
-		this.title = title;
-		this.authorId = author;
-		this.snippet = snippet;
-		this.detail = detail;
-	}
-
-	public BlogModel(String title, Integer author, String snippet, String detail) {
-		super();
-		this.title = title;
-		this.authorId = author;
-		this.snippet = snippet;
-		this.detail = detail;
-	}
-
-	public Date getBlogDate() {
-		return blogDate;
-	}
-
-	public void setBlogDate(Date blogDate) {
-		this.blogDate = blogDate;
-	}
-
 	public BlogModel() {
 		super();
+	}
+
+	public BlogModel(String title, Integer authorId, String snippet, String detail, Date blogDate) {
+		super();
+		this.title = title;
+		this.authorId = authorId;
+		this.snippet = snippet;
+		this.detail = detail;
+		this.blogDate = blogDate;
+	}
+
+	public BlogModel(Long blogId, String title, Integer authorId, String snippet, String detail, Date blogDate) {
+		super();
+		this.blogId = blogId;
+		this.title = title;
+		this.authorId = authorId;
+		this.snippet = snippet;
+		this.detail = detail;
+		this.blogDate = blogDate;
 	}
 
 	public Long getBlogId() {
@@ -87,12 +71,12 @@ public class BlogModel {
 		this.title = title;
 	}
 
-	public Integer getAuthor() {
+	public Integer getAuthorId() {
 		return authorId;
 	}
 
-	public void setAuthor(Integer author) {
-		this.authorId = author;
+	public void setAuthorId(Integer authorId) {
+		this.authorId = authorId;
 	}
 
 	public String getSnippet() {
@@ -109,6 +93,20 @@ public class BlogModel {
 
 	public void setDetail(String detail) {
 		this.detail = detail;
+	}
+
+	public Date getBlogDate() {
+		return blogDate;
+	}
+
+	public void setBlogDate(Date blogDate) {
+		this.blogDate = blogDate;
+	}
+
+	@Override
+	public String toString() {
+		return "BlogModel [blogId=" + blogId + ", title=" + title + ", authorId=" + authorId + ", snippet=" + snippet
+				+ ", detail=" + detail + ", blogDate=" + blogDate + "]";
 	}
 
 }
