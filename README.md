@@ -8,6 +8,8 @@ Blogs operations are done in this project
 
 Main endpoint: **/api/blogs**
 
+REST api link: [In heroku blogs](https://infocave.herokuapp.com/api/blogs)
+
 Variables:
 
 -   **/get/all** : fetches all the blogs from DB.
@@ -46,6 +48,8 @@ Variables:
 ### **For User**:
 
 Main endpoint: **/api/users/**
+
+REST api link: [In heroku users](https://infocave.herokuapp.com/api/users)
 
 Variables:
 
